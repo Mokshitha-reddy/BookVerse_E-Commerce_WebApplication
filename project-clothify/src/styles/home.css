@@ -1,0 +1,657 @@
+/* =================================
+   BOOKVERSE HOME PAGE
+   LUXURY VINTAGE BOOKSTORE THEME
+================================= */
+*{
+  margin: 0%;
+  padding: 0%;
+  /* box-sizing: border-box; */
+}
+.home {
+  width: 100%;
+  background: #f6efe3;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+  min-height: 520px;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 30px auto;
+
+  padding: 60px;
+
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Image + dark overlay */
+  background:
+    linear-gradient(
+      rgba(35, 18, 10, 0.55),
+      rgba(35, 18, 10, 0.55)
+    ),
+    url("../assets/images/bgc.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  
+
+
+  box-shadow:
+    0 12px 35px rgba(50, 25, 10, 0.25);
+}
+
+
+
+/* =================================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+  width: 55%;
+}
+
+.hero-small-text {
+  display: inline-block;
+
+  color: #f5d99a;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+
+/* Main heading */
+
+.hero-content h1 {
+  font-size: 52px;
+
+  line-height: 1.1;
+
+  color: #fff4d6;
+
+  margin-bottom: 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* Highlighted heading */
+
+.hero-content h1 span {
+  color: #d4a64a;
+}
+
+
+/* Paragraph */
+
+.hero-content p {
+  color: #eadcc2;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  max-width: 520px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =================================
+   HERO BUTTONS
+================================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+}
+
+
+.shop-btn,
+.explore-btn {
+  padding: 13px 22px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Shop Now */
+
+.shop-btn {
+  background: #5a321f;
+
+  color: #fff4d6;
+
+  border: 1px solid #c99a3d;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.shop-btn:hover {
+  background: #c99a3d;
+
+  color: #2b1a12;
+
+  transform: translateY(-2px);
+}
+
+
+/* Explore Categories */
+
+.explore-btn {
+  background: #fff4d6;
+
+  color: #5a321f;
+
+  border: 1px solid #c99a3d;
+}
+
+.explore-btn:hover {
+  background: #c99a3d;
+
+  color: #2b1a12;
+
+  transform: translateY(-2px);
+}
+
+
+/* =================================
+   HERO IMAGE / BOOK
+================================= */
+
+/* .hero-image {
+  width: 40%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  
+} */
+
+
+/* Oval behind book */
+
+.hero-book {
+  width: 400px;
+
+  height: 240px;
+
+  /* border-radius: 50%; */
+
+  /* background: rgba(74, 39, 22, 0.85); */
+
+  /* border: 2px solid #c99a3d; */
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 100px;
+
+  box-shadow:
+    0 15px 35px rgba(85, 37, 44, 0.137);
+}
+
+
+/* =================================
+   COMMON SECTION
+================================= */
+
+.home-section {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 70px auto;
+}
+
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 30px;
+}
+
+
+.section-heading h2 {
+  font-size: 30px;
+
+  color: #3b2418;
+
+  margin-bottom: 7px;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+.section-heading > a {
+  color: #9a6b25;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+.section-heading > a:hover {
+  color: #c99a3d;
+}
+
+
+.section-text {
+  color: #705d4c;
+
+  font-size: 15px;
+}
+
+
+/* =================================
+   CATEGORIES
+================================= */
+
+.category-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 18px;
+}
+
+
+.category-card {
+  background: #fffaf0;
+
+  padding: 25px 12px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: #3b2418;
+
+  border: 1px solid #ead9b9;
+
+  box-shadow:
+    0 5px 18px rgba(60, 35, 15, 0.08);
+
+  transition: 0.3s;
+}
+
+
+.category-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #c99a3d;
+
+  box-shadow:
+    0 12px 25px rgba(60, 35, 15, 0.15);
+}
+
+
+.category-icon {
+  font-size: 38px;
+
+  margin-bottom: 12px;
+}
+
+
+.category-card h3 {
+  font-size: 16px;
+
+  margin-bottom: 8px;
+}
+
+
+.category-card p {
+  font-size: 12px;
+
+  color: #806b56;
+
+  line-height: 1.4;
+}
+
+
+/* =================================
+   BESTSELLERS
+================================= */
+
+.book-placeholder {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+.book-item {
+  background: #fffaf0;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: #3b2418;
+
+  border: 1px solid #ead9b9;
+
+  box-shadow:
+    0 5px 20px rgba(60, 35, 15, 0.08);
+
+  transition: 0.3s;
+}
+
+
+.book-item:hover {
+  transform: translateY(-7px);
+
+  border-color: #c99a3d;
+
+  box-shadow:
+    0 12px 30px rgba(60, 35, 15, 0.15);
+}
+
+
+.book-icon {
+  font-size: 65px;
+
+  margin-bottom: 15px;
+}
+
+
+.book-item h3 {
+  font-size: 18px;
+
+  margin-bottom: 8px;
+
+  color: #3b2418;
+}
+
+
+.book-item p {
+  color: #806b56;
+
+  font-size: 14px;
+
+  margin-bottom: 7px;
+}
+
+
+.book-item strong {
+  display: block;
+
+  color: #9a6b25;
+
+  font-size: 20px;
+
+  margin-top: 10px;
+}
+
+
+/* =================================
+   OFFERS
+================================= */
+
+.offer-section {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 70px auto;
+
+  padding: 45px 55px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4a2818,
+      #7a4a28
+    );
+
+  color: #fff4d6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border: 1px solid #c99a3d;
+
+  box-shadow:
+    0 15px 35px rgba(60, 30, 10, 0.25);
+}
+
+
+.offer-content > span {
+  font-size: 14px;
+
+  color: #f0ce87;
+
+  opacity: 0.95;
+}
+
+
+.offer-section h2 {
+  font-size: 34px;
+
+  margin: 10px 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+.offer-section p {
+  font-size: 17px;
+
+  margin-bottom: 20px;
+
+  color: #eadcc2;
+}
+
+
+.offer-section button {
+  padding: 12px 22px;
+
+  border: 1px solid #c99a3d;
+
+  border-radius: 8px;
+
+  background: #fff4d6;
+
+  color: #5a321f;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.offer-section button:hover {
+  transform: translateY(-2px);
+
+  background: #c99a3d;
+
+  color: #2b1a12;
+}
+
+
+.offer-icon {
+  font-size: 90px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+  .category-container {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .book-placeholder {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-book {
+    width: 320px;
+    height: 210px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    width: 94%;
+
+    padding: 35px 25px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .hero-content {
+    width: 100%;
+  }
+
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+
+  .hero-content p {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+
+    flex-direction: column;
+  }
+
+
+  .hero-image {
+    width: 100%;
+
+    margin-top: 30px;
+  }
+
+
+  .hero-book {
+    width: 250px;
+
+    height: 170px;
+
+    font-size: 70px;
+  }
+
+
+  .section-heading {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+
+  .category-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .book-placeholder {
+    grid-template-columns: 1fr;
+  }
+
+
+  .offer-section {
+    width: 94%;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    flex-direction: column;
+  }
+
+
+  .offer-icon {
+    margin-top: 20px;
+
+    font-size: 60px;
+  }
+
+}

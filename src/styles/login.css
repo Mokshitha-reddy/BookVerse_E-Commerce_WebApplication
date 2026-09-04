@@ -1,0 +1,153 @@
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.login-box {
+  width: 350px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  text-align: center;
+  color: #666;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.login-box button:hover {
+  background-color: #555;
+}
+
+.signup-text {
+  margin-top: 20px;
+}
+
+.signup-text a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-login-option {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.admin-login-option p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.admin-login-link {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #5a5a5a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.admin-login-link:hover {
+  background-color: #333;
+}
+.login-choice {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.choice-card {
+  flex: 1;
+  padding: 25px 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.choice-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.choice-card h3 {
+  margin-bottom: 10px;
+}
+
+.choice-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  min-height: 65px;
+}
+
+.choice-card button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.choice-card button:hover {
+  background: #555;
+}
+
+.back-login-btn {
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: none;
+  background: #777;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .login-choice {
+    flex-direction: column;
+  }
+}

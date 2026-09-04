@@ -1,0 +1,141 @@
+.address-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.address-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.address-form {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.address-form h2 {
+  text-align: center;
+}
+
+.address-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-form input,
+.address-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.address-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.address-form button,
+.address-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.saved-addresses {
+  margin-top: 40px;
+}
+
+.saved-addresses h2 {
+  text-align: center;
+}
+
+.address-card {
+  width: 500px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.address-card button {
+  margin-top: 10px;
+}.address-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.address-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.address-form {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.address-form h2 {
+  text-align: center;
+}
+
+.address-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-form input,
+.address-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.address-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.address-form button,
+.address-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.saved-addresses {
+  margin-top: 40px;
+}
+
+.saved-addresses h2 {
+  text-align: center;
+}
+
+.address-card {
+  width: 500px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.address-card button {
+  margin-top: 10px;
+}

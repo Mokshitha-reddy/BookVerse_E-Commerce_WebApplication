@@ -1,0 +1,452 @@
+/* ============================= */
+/* MY ORDERS PAGE */
+/* ============================= */
+
+.orders-page {
+  min-height: 100vh;
+  background: #fff7f7;
+  padding: 40px 7%;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.orders-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.orders-header h1 {
+  font-size: 38px;
+  color: #4d2618;
+  margin-bottom: 8px;
+}
+
+.orders-header p {
+  color: #777;
+  font-size: 17px;
+}
+
+
+/* ============================= */
+/* ORDERS CONTAINER */
+/* ============================= */
+
+.orders-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/* ============================= */
+/* ORDER CARD */
+/* ============================= */
+
+.order-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #f0dddd;
+
+  transition: 0.3s;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================= */
+/* ORDER TOP */
+/* ============================= */
+
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-top h2 {
+  margin: 0 0 8px;
+
+  color: #4d2618;
+
+  font-size: 21px;
+}
+
+.order-date {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* ============================= */
+/* STATUS */
+/* ============================= */
+
+.order-status {
+  background: #e7f7ed;
+
+  color: #16803c;
+
+  padding: 9px 16px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+
+/* ============================= */
+/* DIVIDER */
+/* ============================= */
+
+.order-divider {
+  height: 1px;
+
+  background: #eee;
+
+  margin: 20px 0;
+}
+
+
+/* ============================= */
+/* ORDERED BOOKS */
+/* ============================= */
+
+.ordered-books {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ============================= */
+/* BOOK */
+/* ============================= */
+
+.ordered-book {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 15px;
+
+  background: #fffafa;
+
+  border-radius: 12px;
+
+  border: 1px solid #f2e4e4;
+}
+
+
+/* ============================= */
+/* BOOK IMAGE */
+/* ============================= */
+
+.ordered-book-image {
+  width: 80px;
+
+  height: 110px;
+
+  object-fit: cover;
+
+  border-radius: 7px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================= */
+/* BOOK INFO */
+/* ============================= */
+
+.ordered-book-info {
+  flex: 1;
+}
+
+.ordered-book-info h3 {
+  margin: 0 0 8px;
+
+  color: #4d2618;
+
+  font-size: 18px;
+}
+
+.ordered-book-info p {
+  margin: 5px 0;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+
+/* ============================= */
+/* BOOK TOTAL */
+/* ============================= */
+
+.book-total {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #b85c5c;
+
+  min-width: 100px;
+
+  text-align: right;
+}
+
+
+/* ============================= */
+/* ORDER BOTTOM */
+/* ============================= */
+
+.order-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #eee;
+}
+
+
+/* ============================= */
+/* TOTAL */
+/* ============================= */
+
+.order-total {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.order-total span {
+  color: #777;
+
+  font-size: 14px;
+}
+
+.order-total strong {
+  font-size: 25px;
+
+  color: #4d2618;
+}
+
+
+/* ============================= */
+/* CONTINUE SHOPPING */
+/* ============================= */
+
+.continue-shopping {
+  text-decoration: none;
+
+  background: #d48484;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.continue-shopping:hover {
+  background: #b96666;
+
+  transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* EMPTY ORDERS */
+/* ============================= */
+
+.empty-orders {
+  max-width: 600px;
+
+  margin: 60px auto;
+
+  text-align: center;
+
+  background: white;
+
+  padding: 50px 30px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  font-size: 70px;
+
+  margin-bottom: 15px;
+}
+
+.empty-orders h2 {
+  color: #4d2618;
+
+  font-size: 28px;
+
+  margin-bottom: 10px;
+}
+
+.empty-orders p {
+  color: #777;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* SHOP BOOKS BUTTON */
+/* ============================= */
+
+.shop-books-btn {
+  display: inline-block;
+
+  text-decoration: none;
+
+  background: #d48484;
+
+  color: white;
+
+  padding: 13px 25px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.shop-books-btn:hover {
+  background: #b96666;
+}
+
+
+/* ============================= */
+/* NO BOOKS */
+/* ============================= */
+
+.no-books {
+  text-align: center;
+
+  color: #888;
+
+  padding: 20px;
+}
+
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .orders-page {
+    padding: 30px 4%;
+  }
+
+  .orders-header h1 {
+    font-size: 30px;
+  }
+
+  .order-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .order-status {
+    align-self: flex-start;
+  }
+
+  .ordered-book {
+    align-items: flex-start;
+  }
+
+  .book-total {
+    min-width: auto;
+  }
+
+  .order-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .continue-shopping {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .orders-header h1 {
+    font-size: 26px;
+  }
+
+  .ordered-book {
+    flex-wrap: wrap;
+  }
+
+  .ordered-book-image {
+    width: 65px;
+
+    height: 90px;
+  }
+
+  .ordered-book-info {
+    min-width: 180px;
+  }
+
+  .book-total {
+    width: 100%;
+
+    text-align: left;
+
+    padding-left: 85px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+}
