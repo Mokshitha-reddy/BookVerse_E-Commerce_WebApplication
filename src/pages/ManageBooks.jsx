@@ -19,7 +19,7 @@ const ManageBooks = () => {
   const getBooks = () => {
 
     axios
-      .get("http://localhost:3000/books")
+      .get("http://https://bookverse-api-xnxe.onrender.com/books")
       .then((response) => {
         setBooks(response.data);
       })
@@ -58,7 +58,7 @@ const ManageBooks = () => {
 
       axios
         .put(
-          `http://localhost:3000/books/${editId}`,
+          `http://https://bookverse-api-xnxe.onrender.com/books/${editId}`,
           bookData
         )
         .then(() => {
@@ -88,7 +88,7 @@ const ManageBooks = () => {
 
       axios
         .post(
-          "http://localhost:3000/books",
+          "http://https://bookverse-api-xnxe.onrender.com/books",
           newBook
         )
         .then(() => {
@@ -141,7 +141,7 @@ const ManageBooks = () => {
 
     axios
       .delete(
-        `http://localhost:3000/books/${id}`
+        `http://https://bookverse-api-xnxe.onrender.com/books/${id}`
       )
       .then(() => {
 

@@ -9,7 +9,7 @@ const ManageUsers = () => {
   const getUsers = () => {
 
     axios
-      .get("http://localhost:3000/users")
+      .get("http://https://bookverse-api-xnxe.onrender.com/users")
       .then((response) => {
         setUsers(response.data);
       })
@@ -36,7 +36,7 @@ const ManageUsers = () => {
     }
 
     axios
-      .delete(`http://localhost:3000/users/${id}`)
+      .delete(`http://https://bookverse-api-xnxe.onrender.com/users/${id}`)
       .then(() => {
 
         alert("User deleted successfully!");

@@ -42,7 +42,7 @@ const BookDetails = () => {
         setLoading(true);
 
         const response = await axios.get(
-          `http://localhost:3000/books/${id}`
+          `http://https://bookverse-api-xnxe.onrender.com/books/${id}`
         );
 
         setBook(response.data);

@@ -9,7 +9,7 @@ const ManageOrders = () => {
   const getOrders = () => {
 
     axios
-      .get("http://localhost:3000/orders")
+      .get("http://https://bookverse-api-xnxe.onrender.com/orders")
       .then((response) => {
         setOrders(response.data);
       })
@@ -28,7 +28,7 @@ const ManageOrders = () => {
   const updateStatus = (id, status) => {
 
     axios
-      .patch(`http://localhost:3000/orders/${id}`, {
+      .patch(`http://https://bookverse-api-xnxe.onrender.com/orders/${id}`, {
         status: status
       })
       .then(() => {

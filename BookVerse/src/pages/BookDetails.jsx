@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "../styles/bookdetails.css";
 
@@ -42,7 +41,7 @@ const BookDetails = () => {
         setLoading(true);
 
         const response = await axios.get(
-          `http://localhost:3000/books/${id}`
+          `https://bookverse-api-xnxe.onrender.com/books/${id}`
         );
 
         setBook(response.data);
@@ -282,7 +281,6 @@ const BookDetails = () => {
         </div>
       </div>
 
-
       {/* ================= REVIEWS ================= */}
 
       <div className="reviews-section">
@@ -291,7 +289,6 @@ const BookDetails = () => {
           <FontAwesomeIcon icon={faStar} />
           {" "}Customer Reviews
         </h2>
-
 
         {/* Add Review */}
 
@@ -320,7 +317,6 @@ const BookDetails = () => {
 
           </div>
 
-
           {/* Review Text */}
 
           <textarea
@@ -331,7 +327,6 @@ const BookDetails = () => {
             }
           />
 
-
           <button
             className="submit-review-btn"
             onClick={handleAddReview}
@@ -340,7 +335,6 @@ const BookDetails = () => {
           </button>
 
         </div>
-
 
         {/* Existing Reviews */}
 
@@ -381,7 +375,6 @@ const BookDetails = () => {
 
                 </div>
 
-
                 {/* Review Rating */}
 
                 <div className="review-rating">
@@ -402,13 +395,11 @@ const BookDetails = () => {
 
                 </div>
 
-
                 {/* Review Text */}
 
                 <p className="review-text">
                   {review.text}
                 </p>
-
 
                 {/* Delete */}
 
@@ -437,4 +428,3 @@ const BookDetails = () => {
 };
 
 export default BookDetails;
-
