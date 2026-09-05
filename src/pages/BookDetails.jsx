@@ -41,9 +41,9 @@ const BookDetails = () => {
       try {
         setLoading(true);
 
-        const response = await axios.get(
-          `http://https://bookverse-api-xnxe.onrender.com/books/${id}`
-        );
+       const response = await axios.get(
+  `https://bookverse-api-l4vz.onrender.com/books/${id}`
+);
 
         setBook(response.data);
         setError("");
