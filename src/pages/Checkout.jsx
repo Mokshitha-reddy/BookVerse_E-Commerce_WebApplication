@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import "../styles/checkout.css";
 
 // Font Awesome
@@ -13,8 +14,15 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Checkout = ({ cart = [], setCart }) => {
+// Redux
+import { clearCart } from "../redux/slices/cartSlice";
+
+const Checkout = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  // Get cart directly from Redux
+  const cart = useSelector((state) => state.cart.items);
 
   const [addresses] = useState(
     JSON.parse(localStorage.getItem("addresses")) || []
@@ -26,15 +34,12 @@ const Checkout = ({ cart = [], setCart }) => {
   // CALCULATE TOTAL
   // =========================
 
-  const totalPrice = cart.reduce(
-    (total, item) => {
-      const price = Number(item.price) || 0;
-      const quantity = Number(item.quantity) || 1;
+  const totalPrice = cart.reduce((total, item) => {
+    const price = Number(item.price) || 0;
+    const quantity = Number(item.quantity) || 1;
 
-      return total + price * quantity;
-    },
-    0
-  );
+    return total + price * quantity;
+  }, 0);
 
   // =========================
   // PLACE ORDER
@@ -59,8 +64,7 @@ const Checkout = ({ cart = [], setCart }) => {
     const existingOrders =
       JSON.parse(localStorage.getItem("orders")) || [];
 
-    // Create COPY of cart items
-    // before clearing the cart
+    // Copy cart items before clearing
     const orderItems = cart.map((item) => ({
       id: item.id,
       title: item.title,
@@ -73,38 +77,69 @@ const Checkout = ({ cart = [], setCart }) => {
     // Create order
     const newOrder = {
       id: Date.now(),
-
       items: orderItems,
-
       total: totalPrice,
-
       date: new Date().toISOString(),
-
       status: "Order Placed",
-
       address: selectedAddress,
     };
 
-    // Add new order
+    // Save order
     const updatedOrders = [
       ...existingOrders,
       newOrder,
     ];
 
-    // Save orders
     localStorage.setItem(
       "orders",
       JSON.stringify(updatedOrders)
     );
 
-    // Clear cart AFTER saving order
-    setCart([]);
+    // Clear Redux cart
+    dispatch(clearCart());
 
+    // Also remove old localStorage cart
     localStorage.removeItem("cart");
 
-    // Go to success page
+    // Go to Order Success
     navigate("/OrderSuccess");
   };
+
+  // =========================
+  // EMPTY CART
+  // =========================
+
+  if (cart.length === 0) {
+    return (
+      <div className="checkout-page">
+
+        <h1>
+          <FontAwesomeIcon icon={faCreditCard} /> Checkout
+        </h1>
+
+        <div className="checkout-container">
+
+          <div className="customer-details">
+
+            <h2>
+              Your cart is empty.
+            </h2>
+
+            <button
+              type="button"
+              onClick={() => navigate("/Books")}
+            >
+              <FontAwesomeIcon icon={faBookOpen} />{" "}
+              Continue Shopping
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    );
+  }
 
   return (
     <div className="checkout-page">
@@ -223,7 +258,6 @@ const Checkout = ({ cart = [], setCart }) => {
 
         </div>
 
-
         {/* ========================= */}
         {/* ORDER SUMMARY */}
         {/* ========================= */}
@@ -235,53 +269,43 @@ const Checkout = ({ cart = [], setCart }) => {
             Order Summary
           </h2>
 
-          {cart.length === 0 ? (
+          {cart.map((item) => (
 
-            <p>
-              Your cart is empty.
-            </p>
+            <div
+              className="checkout-item"
+              key={item.id}
+            >
 
-          ) : (
+              <img
+                src={item.image}
+                alt={item.title}
+              />
 
-            cart.map((item) => (
+              <div>
 
-              <div
-                className="checkout-item"
-                key={item.id}
-              >
+                <h3>
+                  {item.title}
+                </h3>
 
-                <img
-                  src={item.image}
-                  alt={item.title}
-                />
+                <p>
+                  ₹{Number(item.price || 0).toFixed(2)}
+                  {" × "}
+                  {Number(item.quantity || 1)}
+                </p>
 
-                <div>
-
-                  <h3>
-                    {item.title}
-                  </h3>
-
-                  <p>
-                    ₹{Number(item.price).toFixed(2)}
-                    {" × "}
-                    {item.quantity || 1}
-                  </p>
-
-                  <p>
-                    Subtotal: ₹
-                    {(
-                      Number(item.price) *
-                      Number(item.quantity || 1)
-                    ).toFixed(2)}
-                  </p>
-
-                </div>
+                <p>
+                  Subtotal: ₹
+                  {(
+                    Number(item.price || 0) *
+                    Number(item.quantity || 1)
+                  ).toFixed(2)}
+                </p>
 
               </div>
 
-            ))
+            </div>
 
-          )}
+          ))}
 
           <hr />
 
