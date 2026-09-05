@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/books.css";
 import axios from "axios";
 import BookCard from "../components/BookCard";
-// import SearchBar from "../components/SearchBar";
 
 const Books = () => {
   const [Books, setBooks] = useState([]);
@@ -10,13 +9,12 @@ const Books = () => {
   const [Category, setCategory] = useState("All");
 
   useEffect(() => {
-    axios
-      .get("http://https://bookverse-api-xnxe.onrender.com/books")
+    axios.get("http://localhost:3001/books")
       .then((response) => {
         setBooks(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("Error fetching books:", error);
       });
   }, []);
 

@@ -22,7 +22,7 @@ const BookFinder = () => {
   // Fetch books from JSON Server
   useEffect(() => {
     axios
-      .get("http://https://bookverse-api-xnxe.onrender.com/books")
+      .get("http://localhost:3001/books")
       .then((response) => {
         setBooks(response.data);
         setLoading(false);

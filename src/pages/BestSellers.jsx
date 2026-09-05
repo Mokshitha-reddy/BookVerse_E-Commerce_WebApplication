@@ -10,7 +10,7 @@ const BestSellers = () => {
   useEffect(() => {
 
     axios
-      .get("http://https://bookverse-api-xnxe.onrender.com/books")
+      .get("http://localhost:3001/books")
       .then((response) => {
         setBooks(response.data);
       })
