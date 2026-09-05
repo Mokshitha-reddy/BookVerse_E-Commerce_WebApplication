@@ -11,7 +11,7 @@ const Offers = () => {
   useEffect(() => {
 
     axios
-      .get("http://localhost:3001/books")
+      .get("https://bookverse-api-l4vz.onrender.com/books")
       .then((response) => {
 
         console.log("BOOK DATA:", response.data);
